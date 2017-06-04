@@ -12,4 +12,24 @@ router.get('/addUser', function(req, res, next){
     userDao.add(req, res, next);
 });
 
+/* 查询所有用户 */
+router.get('/queryAll', function(req, res, next) {
+	userDao.queryAll(req, res, next);
+});
+
+/* 查询ID */
+router.get('/query', function(req, res, next) {
+	userDao.queryById(req, res, next);
+});
+
+/* 删除用户 */
+router.get('/deleteUser', function(req, res, next) {
+	userDao.delete(req, res, next);
+});
+
+/* 更新用户信息 */
+router.post('/updateUser', function(req, res, next) {
+	userDao.update(req, res, next);
+});
+
 module.exports = router;
